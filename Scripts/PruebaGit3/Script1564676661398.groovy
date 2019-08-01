@@ -13,5 +13,21 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.switchToWindowTitle('HOLA01')
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('http://ayni.dev.interbank.per/')
+
+WebUI.setText(findTestObject('Object Repository/Page_Interbank AyniBot/input_Iniciar Sesin_username'), 't00002')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Interbank AyniBot/input_Usuario_password'), 'iJjxP/bsvFDeSZ5Z57jzAA==')
+
+WebUI.click(findTestObject('Object Repository/Page_Interbank AyniBot/button_Ingresar'))
+
+WebUI.click(findTestObject('Object Repository/Page_Interbank AyniBot/mat-card_Tasas y comisiones'))
+
+WebUI.click(findTestObject('Object Repository/Page_Interbank AyniBot/button_OTROS SERVICIOS'))
+
+WebUI.click(findTestObject('Object Repository/Page_Interbank AyniBot/button_VER OTROS PRODUCTOS'))
+
+WebUI.closeBrowser()
 
